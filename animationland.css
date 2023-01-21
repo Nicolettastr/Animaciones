@@ -631,7 +631,7 @@ input[type=checkbox]:focus{
     }
 }
 
-@media (max-width: 900px) {
+@media (min-width: 600px) {
     .score {
         top: 195px;
         left: 355px;
@@ -640,6 +640,18 @@ input[type=checkbox]:focus{
     .total-count:after {
         top: 224px;
         right: 375px;
+    }
+}
+
+@media (min-width: 900px) {
+    .total-count:after {
+        top: 102px;
+        right: 635px;
+    }
+    
+    .score {
+        top: 73px;
+        left: 630px;
     }
 }
 
