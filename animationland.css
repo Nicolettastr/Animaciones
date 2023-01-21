@@ -1,9 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 body {
     margin: 0;
     height: 100vh;
     width: 100%;
+    display: -ms-grid;
     display: grid;
     place-items: center;
     font-family: 'Dancing Script', cursive;
@@ -14,11 +22,14 @@ input:checked {
 }
 
 input[type=checkbox]:focus{
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     outline: none;
 }
 
 .h1 {
+    display: -ms-grid;
     display: grid;
     place-content: center;
 }
@@ -44,7 +55,8 @@ input[type=checkbox]:focus{
     height: 600px;
     width: 350px;
     background: #ccefff;
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+            box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
     counter-reset: game;
 }
 
@@ -55,10 +67,29 @@ input[type=checkbox]:focus{
     width: 80px;
     bottom: 0;
     right: 60px;
-    animation-name: up;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: up;
+            animation-name: up;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+
+@-webkit-keyframes up {
+    0% {
+        bottom: 0;
+    }
+
+    25%{
+        bottom: -80px;
+    }
+
+    100% {
+        bottom: 0;
+    }
 }
 
 
@@ -82,7 +113,9 @@ input[type=checkbox]:focus{
 .layer-4 input[type=checkbox],
 .layer-6 input[type=checkbox],
 .layer-10 input[type=checkbox] {
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     cursor: pointer;
     height: 50px;
     margin: 0;
@@ -99,10 +132,28 @@ input[type=checkbox]:focus{
     width: 80px;
     bottom: 0;
     left: 60px;
-    animation-name: down;
-    animation-duration: 1500ms;
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    animation-iteration-count: infinite;
+    -webkit-animation-name: down;
+            animation-name: down;
+    -webkit-animation-duration: 1500ms;
+            animation-duration: 1500ms;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes down {
+    0% {
+        bottom: 0;
+    }
+
+    25%{
+        bottom: -40px;
+    }
+
+    100% {
+        bottom: 0;
+    }
 }
 
 @keyframes down {
@@ -139,10 +190,28 @@ input[type=checkbox]:focus{
     height: 310px;
     bottom: 0;
     left: 30px;
-    animation-name: left;
-    animation-duration: 3s;
-    animation-timing-function: cubic-bezier(.87,.09,.85,.46);
-    animation-iteration-count: infinite;
+    -webkit-animation-name: left;
+            animation-name: left;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-timing-function: cubic-bezier(.87,.09,.85,.46);
+            animation-timing-function: cubic-bezier(.87,.09,.85,.46);
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes left {
+    0% {
+        bottom: 0;
+    }
+
+    25%{
+        bottom: -70px;
+    }
+
+    100% {
+        bottom: 0;
+    }
 }
 
 @keyframes left {
@@ -176,10 +245,28 @@ input[type=checkbox]:focus{
     height: 270px;
     bottom: 0%;
     right: 30px;
-    animation-name: pum;
-    animation-duration: 2550ms;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: pum;
+            animation-name: pum;
+    -webkit-animation-duration: 2550ms;
+            animation-duration: 2550ms;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pum {
+    0% {
+        bottom: 0;
+    }
+
+    25%{
+        bottom: -80px;
+    }
+
+    100% {
+        bottom: 0;
+    }
 }
 
 @keyframes pum {
@@ -266,10 +353,29 @@ input[type=checkbox]:focus{
     left: 0px;
     right: 0px;
     margin: 0 auto;
-    animation-name: boom;
-    animation-duration: 1800ms;
-    animation-timing-function: cubic-bezier(.94,.83,.02,.69);
-    animation-iteration-count: infinite;
+    -webkit-animation-name: boom;
+            animation-name: boom;
+    -webkit-animation-duration: 1800ms;
+            animation-duration: 1800ms;
+    -webkit-animation-timing-function: cubic-bezier(.94,.83,.02,.69);
+            animation-timing-function: cubic-bezier(.94,.83,.02,.69);
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+
+@-webkit-keyframes boom {
+    0% {
+        bottom: 0;
+    }
+
+    25%{
+        bottom: -50px;
+    }
+
+    100% {
+        bottom: 0;
+    }
 }
 
 
@@ -356,9 +462,30 @@ input[type=checkbox]:focus{
     border-radius: 50%;
     background: black;
     position: absolute;
-    animation-name: blink;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: blink;
+            animation-name: blink;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        height: 4px;
+    }
+
+    5% {
+        -webkit-transform: translate(0px, 2px);
+                transform: translate(0px, 2px);
+        height: 1px;
+    }
+
+    10% {
+        -webkit-transform: translate(0px, 0px);
+                transform: translate(0px, 0px);
+        height: 4px;
+    }
 }
 
 @keyframes blink {
@@ -367,12 +494,14 @@ input[type=checkbox]:focus{
     }
 
     5% {
-        transform: translate(0px, 2px);
+        -webkit-transform: translate(0px, 2px);
+                transform: translate(0px, 2px);
         height: 1px;
     }
 
     10% {
-        transform: translate(0px, 0px);
+        -webkit-transform: translate(0px, 0px);
+                transform: translate(0px, 0px);
         height: 4px;
     }
 }
@@ -440,16 +569,19 @@ input[type=checkbox]:focus{
 .zigzag {
     width: 100%;
     height: 30px;
+    background: -o-linear-gradient(315deg,  rgb(145, 212, 43) 25%, transparent 25%) -50px 0, -o-linear-gradient(225deg,  rgb(145, 212, 43) 25%, transparent 25%) -50px 0, -o-linear-gradient(45deg, rgb(160, 107, 57) 25%, transparent 25%), -o-linear-gradient(135deg, transparent 25%, rgb(114, 73, 26) 25%);
     background: linear-gradient(135deg,  rgb(145, 212, 43) 25%, transparent 25%) -50px 0, linear-gradient(-135deg,  rgb(145, 212, 43) 25%, transparent 25%) -50px 0, linear-gradient(45deg, rgb(160, 107, 57) 25%, transparent 25%), linear-gradient(-45deg, transparent 25%, rgb(114, 73, 26) 25%);
     background-size: 33px 30px;
 }
 
 .zig-one {
+    background: -o-linear-gradient(315deg,  rgb(145, 212, 43) 25%, transparent 25%) -50px 0, -o-linear-gradient(225deg,  rgb(145, 212, 43) 25%, transparent 25%) -50px 0, -o-linear-gradient(45deg, rgb(160, 107, 57) 25%, transparent 25%), -o-linear-gradient(135deg, transparent 25%, rgb(114, 73, 26) 25%);
     background: linear-gradient(135deg,  rgb(145, 212, 43) 25%, transparent 25%) -50px 0, linear-gradient(-135deg,  rgb(145, 212, 43) 25%, transparent 25%) -50px 0, linear-gradient(45deg, rgb(160, 107, 57) 25%, transparent 25%), linear-gradient(-45deg, transparent 25%, rgb(114, 73, 26) 25%);
     background-size: 33px 30px;
 }
 
 .zig-two {
+    background: -o-linear-gradient(315deg,  rgb(145, 212, 43) 25%, transparent 25%) -50px 0, -o-linear-gradient(225deg,  rgb(145, 212, 43) 25%, transparent 25%) -50px 0, -o-linear-gradient(45deg, rgb(160, 107, 57) 25%, transparent 25%), -o-linear-gradient(135deg, transparent 25%, rgb(114, 73, 26) 25%);
     background: linear-gradient(135deg,  rgb(145, 212, 43) 25%, transparent 25%) -50px 0, linear-gradient(-135deg,  rgb(145, 212, 43) 25%, transparent 25%) -50px 0, linear-gradient(45deg, rgb(160, 107, 57) 25%, transparent 25%), linear-gradient(-45deg, transparent 25%, rgb(114, 73, 26) 25%);
     background-size: 33px 30px;
 }
@@ -488,3 +620,26 @@ input[type=checkbox]:focus{
     top: 30px;
     left: -70px;
 }
+
+@media (max-width: 600px) {
+    .score {
+        left: 125px;
+    }
+
+    .total-count:after {
+        right: 150px;
+    }
+}
+
+@media (max-width: 900px) {
+    .score {
+        top: 195px;
+        left: 355px;
+    }
+
+    .total-count:after {
+        top: 224px;
+        right: 375px;
+    }
+}
+
